@@ -85,7 +85,7 @@ const YourListings: React.FC<{}> = () => {
 
   useEffect(() => {
     //don't run until it's loaded
-    if (!nftData) return;
+    if (!Array.isArray(nftData)) return;
 
     //maps array of nft metadata to
     nftData.map((nft, index) =>
